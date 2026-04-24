@@ -7,8 +7,8 @@
     <div class="mb-7">
       <p class="text-muted">{{Formatter.formattedCurrentDate()}}</p>
       <h1 class="text-foreground text-3xl mt-2">Добрый день, {{authStore.user?.profile.firstName}}</h1>
-    </div>
 
+    </div>
   </div>
 </template>
 

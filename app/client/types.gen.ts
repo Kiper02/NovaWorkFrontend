@@ -197,6 +197,33 @@ export type CreateUserDto = {
     lastName: string;
 };
 
+export type AccountResponseDto = {
+    /**
+     * Уникальный идентификатор аккаунта
+     */
+    id: string;
+    /**
+     * Уникальный идентификатор пользователя
+     */
+    userId: string;
+    /**
+     * Доступный баланс пользователя
+     */
+    availableBalance: number;
+    /**
+     * Замороженные средства пользователя
+     */
+    frozenBalance: number;
+    /**
+     * Доступное пространство для статики
+     */
+    storageQuotaBytes: number;
+    /**
+     * Использованное пространство
+     */
+    storageUsedBytes: number;
+};
+
 export type FindMeResponseDto = {
     /**
      * Уникальный идентификатор пользователя
@@ -213,15 +240,11 @@ export type FindMeResponseDto = {
     /**
      * Аккаунт пользователя
      */
-    account: {
-        [key: string]: unknown;
-    };
+    account: AccountResponseDto;
     /**
      * Профиль пользователя
      */
-    profile: {
-        [key: string]: unknown;
-    };
+    profile: ProfileResponseDto;
     /**
      * Рабочие пространства пользователя
      */
@@ -284,33 +307,6 @@ export type CreateAccountDto = {
      * Замороженные средства пользователя
      */
     frozenBalance: number;
-};
-
-export type AccountResponseDto = {
-    /**
-     * Уникальный идентификатор аккаунта
-     */
-    id: string;
-    /**
-     * Уникальный идентификатор пользователя
-     */
-    userId: string;
-    /**
-     * Доступный баланс пользователя
-     */
-    availableBalance: number;
-    /**
-     * Замороженные средства пользователя
-     */
-    frozenBalance: number;
-    /**
-     * Доступное пространство для статики
-     */
-    storageQuotaBytes: number;
-    /**
-     * Использованное пространство
-     */
-    storageUsedBytes: number;
 };
 
 export type UpdateAccountDto = {

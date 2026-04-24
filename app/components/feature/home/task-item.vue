@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { formattedPriceUtil }  from "~/utils/formatted-price.util"
 import type {TaskResponseForDetailsDto} from "~/client";
 
 defineProps<{task: TaskResponseForDetailsDto}>()
@@ -13,7 +12,7 @@ defineProps<{task: TaskResponseForDetailsDto}>()
     <div class="mt-3 flex flex-col gap-3 text-muted">
       <div class="flex items-center gap-1">
         <Icon name="lucide:dollar-sign" class="w-4 h-4 text-green-500" />
-        <span class="text-sm text-foreground">{{ formattedPriceUtil(task) }}</span>
+        <span class="text-sm text-foreground">100$</span>
       </div>
       <div class="flex items-center gap-1">
         <Icon name="lucide:clock" class="w-4 h-4 text-orange-500" />

@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <div class="border border-surfaceHover rounded-xl bg-card w-full">
+  <div class="border border-(--surfaceHover) rounded-xl bg-card w-full">
     <slot />
   </div>
 </template>

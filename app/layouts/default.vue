@@ -21,7 +21,6 @@ watch(data, (userData) => {
   if (userData) {
     authStore.set({
       user: userData,
-      status: true
     });
   }
 }, { immediate: true });
@@ -37,7 +36,7 @@ watch(error, (err: any) => {
 
 <template>
   <div>
-    <AppHeader :with-auth="authStore.status" />
+    <AppHeader  />
     <div class="flex h-screen">
       <div
           class="transition-all duration-300 ease-in-out overflow-hidden border-r border-border"

@@ -11,6 +11,7 @@ export default defineNuxtConfig({
     '@peterbud/nuxt-query',
     'shadcn-nuxt'
   ],
+
   nitro: {
     devProxy: {
       '/api': {
@@ -28,8 +29,13 @@ export default defineNuxtConfig({
   },
   css: [
     './app/assets/css/tailwind.css',
-    // './app/assets/css/scroll.css',
+    './app/assets/css/scroll.css',
   ],
+  icon: {
+    clientBundle: {
+      scan: true,
+    },
+  },
   vite: {
     plugins: [
       tailwindcss(),

@@ -8,7 +8,7 @@ import { toast } from 'vue-sonner';
 
 const { mutate: register, isPending } = useMutation({
   ...authControllerRegisterMutation(),
-  onSuccess: () => navigateTo('/auth/login?registered=true'),
+  onSuccess: () => navigateTo('/auth?type=login'),
   onError: (err: any) => toast.error(`Ошибка: ${err.message || 'неизвестная ошибка'}`),
 });
 
